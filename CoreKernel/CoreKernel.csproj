@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CoreKernel.DomainMarkers\CoreKernel.DomainMarkers.csproj" />
+      <ProjectReference Include="..\CoreKernel.Functional\CoreKernel.Functional.csproj" />
+      <ProjectReference Include="..\CoreKernel.Messaging\CoreKernel.Messaging.csproj" />
+      <ProjectReference Include="..\CoreKernel.Primitives\CoreKernel.Primitives.csproj" />
+    </ItemGroup>
+
+</Project>
