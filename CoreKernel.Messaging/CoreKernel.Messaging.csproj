@@ -1,18 +1,42 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net9.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
+        <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+        <Version>1.0.0</Version>
+        <Authors>Kaustab Samanta</Authors>
+        <Description>Interfaces for implementing CQRS and Domain Event patterns in .NET using Commands, Queries, Events, and Handlers.</Description>
+        <Copyright>Copyright Kaustab Samanta</Copyright>
         <Nullable>enable</Nullable>
+        <Features>strict</Features>
+        <PackageTags>CQRS;Messaging;Domain Events;Commands;Queries;Event Handlers;Mediator;DDD;Clean Architecture</PackageTags>
+        <PackageId>CoreKernel.Messaging</PackageId>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/ScriptSage001/CoreKernel</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <PackageIcon>flat_256x256.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <MinVerTagPrefix>v</MinVerTagPrefix>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <Deterministic>true</Deterministic>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="MediatR" Version="12.5.0" />
+        <PackageReference Include="CoreKernel.Functional" Version="1.0.0"/>
+        <PackageReference Include="CoreKernel.Primitives" Version="1.0.1"/>
+        <PackageReference Include="MediatR" Version="12.5.0"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\CoreKernel.Functional\CoreKernel.Functional.csproj" />
-      <ProjectReference Include="..\CoreKernel.Primitives\CoreKernel.Primitives.csproj" />
+        <None Include="..\assets\logo\flat_256x256.png" Pack="true" PackagePath=""/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\"/>
     </ItemGroup>
 
 </Project>

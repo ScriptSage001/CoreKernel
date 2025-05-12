@@ -1,16 +1,43 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net9.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
+        <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+        <Version>1.0.0</Version>
+        <Authors>Kaustab Samanta</Authors>
+        <Description>CoreKernel is a modular .NET library that provides reusable primitives, functional utilities, domain markers, and messaging interfaces for building clean, maintainable, and domain-driven applications.</Description>
+        <Copyright>Copyright Kaustab Samanta</Copyright>
         <Nullable>enable</Nullable>
+        <Features>strict</Features>
+        <PackageTags>DDD;Clean Architecture;CQRS;Functional Programming;Railway Oriented Programming;Result;Entity;ValueObject</PackageTags>
+        <PackageId>CoreKernel</PackageId>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/ScriptSage001/CoreKernel</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <PackageIcon>flat_256x256.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <MinVerTagPrefix>v</MinVerTagPrefix>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <Deterministic>true</Deterministic>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\CoreKernel.DomainMarkers\CoreKernel.DomainMarkers.csproj" />
-      <ProjectReference Include="..\CoreKernel.Functional\CoreKernel.Functional.csproj" />
-      <ProjectReference Include="..\CoreKernel.Messaging\CoreKernel.Messaging.csproj" />
-      <ProjectReference Include="..\CoreKernel.Primitives\CoreKernel.Primitives.csproj" />
+        <PackageReference Include="CoreKernel.Functional" Version="1.0.0"/>
+        <PackageReference Include="CoreKernel.Messaging" Version="1.0.0" />
+        <PackageReference Include="CoreKernel.Primitives" Version="1.0.1"/>
+        <PackageReference Include="CoreKernel.DomainMarkers" Version="1.0.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\assets\logo\flat_256x256.png" Pack="true" PackagePath=""/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\"/>
     </ItemGroup>
 
 </Project>
