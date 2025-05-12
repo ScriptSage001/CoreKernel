@@ -1,0 +1,39 @@
+name: Release NuGet Package
+
+on:
+  workflow_dispatch:
+    inputs:
+      package:
+        description: 'Select the NuGet package to release'
+        required: true
+        type: choice
+        options:
+          - CoreKernel/CoreKernel.csproj
+          - CoreKernel.Primitives/CoreKernel.Primitives.csproj
+          - CoreKernel.Functional/CoreKernel.Functional.csproj
+          - CoreKernel.DomainMarkers/CoreKernel.DomainMarkers.csproj
+          - CoreKernel.Messaging/CoreKernel.Messaging.csproj
+      version:
+        description: 'Package version (e.g., 1.2.3)'
+        required: true
+
+jobs:
+  build-pack-push:
+    if: github.ref == 'refs/heads/release'
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.x'
+
+      - name: Run PowerShell script to build, pack, and push
+        run: |
+          ./scripts/build-pack-push.ps1 -ProjectPath "${{ github.event.inputs.package }}" -Version "${{ github.event.inputs.version }}"
+        shell: pwsh
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
