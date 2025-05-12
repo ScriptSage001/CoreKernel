@@ -1,4 +1,8 @@
-# CoreKernel.Functional Library
+<h1 align="center" id="title">CoreKernel.Functional Library</h1>
+
+<p align="center"><img src="https://github.com/ScriptSage001/CoreKernel/blob/master/assets/logo/flat_500x500.png?raw=true" alt="logo"></p>
+
+<br>
 
 The `CoreKernel.Functional` library provides robust functional programming abstractions for C# applications, enabling more declarative, expressive, and error-resistant code patterns. It offers monadic types like `Result<T>` and `Maybe<T>` to handle common scenarios such as error propagation and optional values in a functional style.
 
