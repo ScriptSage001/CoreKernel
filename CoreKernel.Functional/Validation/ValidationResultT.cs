@@ -1,3 +1,4 @@
+using System;
 using CoreKernel.Functional.Results;
 
 namespace CoreKernel.Functional.Validation;

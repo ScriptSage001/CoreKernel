@@ -1,3 +1,5 @@
+using System;
+
 namespace CoreKernel.Functional.Results;
         
         /// <summary>

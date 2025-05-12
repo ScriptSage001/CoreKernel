@@ -1,9 +1,36 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net9.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
+        <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+        <Version>1.0.0</Version>
+        <Authors>Kaustab Samanta</Authors>
+        <Description>Provides domain-driven design markers like IAuditable, ISoftDeletable, ITraceable, and ITenantScoped that enforce domain entity contracts in DDD and Clean Architecture.</Description>
+        <Copyright>Copyright Kaustab Samanta</Copyright>
         <Nullable>enable</Nullable>
+        <Features>strict</Features>
+        <PackageTags>DDD;Domain-Driven Design;Clean Architecture;Auditing;Soft Delete;Multitenancy;Tracing;Domain Model</PackageTags>
+        <PackageId>CoreKernel.DomainMarkers</PackageId>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/ScriptSage001/CoreKernel</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <PackageIcon>flat_256x256.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <MinVerTagPrefix>v</MinVerTagPrefix>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <Deterministic>true</Deterministic>
     </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\assets\logo\flat_256x256.png" Pack="true" PackagePath="" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
 
 </Project>

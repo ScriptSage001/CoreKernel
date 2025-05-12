@@ -1,3 +1,5 @@
+using System;
+
 namespace CoreKernel.Functional.Results;
 
 /// <summary>
@@ -76,19 +78,62 @@ public record Error(string Code, string Message, ErrorType Type)
 }
 
 /// <summary>
-/// Represents the type of error.
+/// Represents the type of error that can occur in the application.
 /// </summary>
 public enum ErrorType
 {
+    /// <summary>
+    /// No error occurred.
+    /// </summary>
     None,
+
+    /// <summary>
+    /// A general failure error.
+    /// </summary>
     Failure,
+
+    /// <summary>
+    /// An error related to validation.
+    /// </summary>
     Validation,
+
+    /// <summary>
+    /// An error indicating a conflict.
+    /// </summary>
     Conflict,
+
+    /// <summary>
+    /// An error indicating a resource was not found.
+    /// </summary>
     NotFound,
+
+    /// <summary>
+    /// An error indicating an unauthorized request.
+    /// </summary>
     Unauthorized,
+
+    /// <summary>
+    /// An error indicating forbidden access.
+    /// </summary>
     Forbidden,
+
+    /// <summary>
+    /// An error indicating the resource is gone.
+    /// </summary>
     Gone,
+
+    /// <summary>
+    /// An error indicating no content is available.
+    /// </summary>
     NoContent,
+
+    /// <summary>
+    /// An error indicating a bad request.
+    /// </summary>
     BadRequest,
+
+    /// <summary>
+    /// An unexpected error occurred.
+    /// </summary>
     Unexpected
 }

@@ -1,3 +1,5 @@
+using System;
+
 namespace CoreKernel.DomainMarkers.Tracing;
 
 /// <summary>
