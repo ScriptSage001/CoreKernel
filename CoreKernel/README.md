@@ -1,4 +1,8 @@
-﻿# CoreKernel Library
+<h1 align="center" id="title">CoreKernel Library</h1>
+
+<p align="center"><img src="https://github.com/ScriptSage001/CoreKernel/blob/master/assets/logo/flat_500x500.png?raw=true" alt="logo"></p>
+
+<br>
 
 The `CoreKernel` library provides a comprehensive set of foundational abstractions and utilities for building robust, modular, and maintainable .NET applications. It implements patterns from Domain-Driven Design (DDD), functional programming, and modern architectural approaches like CQRS and Event-Driven Architecture.
 
@@ -367,6 +371,61 @@ Result<string> nameResult = someName.ToResult("Name is required");
 ```
 
 #### Validation
+
+##### Validator Overview
+
+The `Validator` class provides methods to validate input against single or multiple rules, returning structured results. It integrates seamlessly with the `Result` and `ValidationResult` patterns.
+
+###### Validating Single Rule
+
+```csharp
+using CoreKernel.Functional.Validation;
+
+// Validate input against a single rule
+var result = Validator.Validate(
+    input: "example@example.com",
+    validationRule: value => value.Contains("@"),
+    errorMessage: "Input must contain '@'."
+);
+
+if (result.IsSuccess)
+{
+    Console.WriteLine("Validation succeeded: " + result.Value);
+}
+else
+{
+    Console.WriteLine("Validation failed: " + result.Error.Message);
+}
+```
+###### Validating Multiple Rules
+
+```csharp
+using CoreKernel.Functional.Validation;
+
+// Define validation rules
+var validationRules = new List<(Func<string, bool> rule, string errorMessage)>
+{
+  (value => !string.IsNullOrWhiteSpace(value), "Input cannot be empty."),
+  (value => value.Contains("@"), "Input must contain '@'."),
+  (value => value.Length <= 50, "Input must not exceed 50 characters.")
+};
+
+// Validate input against multiple rules
+var result = Validator.Validate("example@example.com", validationRules);
+
+if (result.IsSuccess)
+{
+    Console.WriteLine("Validation succeeded: " + result.Value);
+}
+else
+{
+    Console.WriteLine("Validation failed with errors:");
+    foreach (var error in ((IValidationResult)result).Errors)
+    {
+        Console.WriteLine($"- {error.Message}");
+    }
+}
+```
 
 Validation types allow collecting multiple validation errors:
 
