@@ -1,4 +1,8 @@
-﻿# CoreKernel Library
+<h1 align="center" id="title">CoreKernel Library</h1>
+
+<p align="center"><img src="https://github.com/ScriptSage001/CoreKernel/blob/master/assets/logo/flat_500x500.png?raw=true" alt="logo"></p>
+
+<br>
 
 The `CoreKernel` library provides a comprehensive set of foundational abstractions and utilities for building robust, modular, and maintainable .NET applications. It implements patterns from Domain-Driven Design (DDD), functional programming, and modern architectural approaches like CQRS and Event-Driven Architecture.
 
