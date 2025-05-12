@@ -1,4 +1,8 @@
-# CoreKernel.DomainMarkers Library
+<h1 align="center" id="title">CoreKernel.DomainMarkers Library</h1>
+
+<p align="center"><img src="https://github.com/ScriptSage001/CoreKernel/blob/master/assets/logo/flat_500x500.png?raw=true" alt="logo"></p>
+
+<br>
 
 The `CoreKernel.DomainMarkers` library provides a set of interfaces that serve as markers for common cross-cutting concerns in domain entities. These markers help standardize entity behaviors across your application while enabling automatic handling of concerns like auditing, multi-tenancy, soft deletion, and distributed tracing.
 
