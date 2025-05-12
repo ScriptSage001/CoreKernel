@@ -1,8 +1,4 @@
-<h1 align="center" id="title">CoreKernel.Primitives Library</h1>
-
-<p align="center"><img src="https://github.com/ScriptSage001/CoreKernel/blob/master/assets/logo/flat_500x500.png?raw=true" alt="logo"></p>
-
-<br>
+# CoreKernel.Primitives Library
 
 The `CoreKernel.Primitives` library provides foundational building blocks for Domain-Driven Design (DDD) in C#. It includes abstractions for **entities**, **aggregate roots**, **value objects**, and **strongly-typed IDs**, empowering developers to model business domains with clarity and consistency.
 

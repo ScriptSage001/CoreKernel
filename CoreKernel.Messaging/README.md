@@ -1,8 +1,4 @@
-<h1 align="center" id="title">CoreKernel.Messaging Library</h1>
-
-<p align="center"><img src="https://github.com/ScriptSage001/CoreKernel/blob/master/assets/logo/flat_500x500.png?raw=true" alt="logo"></p>
-
-<br>
+# CoreKernel.Messaging Library
 
 The `CoreKernel.Messaging` library provides essential abstractions for implementing the Command Query Responsibility Segregation (CQRS) and Event-Driven Architecture patterns in C#. It leverages MediatR to offer a clean messaging infrastructure for commands, queries, and events, empowering developers to build maintainable and scalable applications.
 
