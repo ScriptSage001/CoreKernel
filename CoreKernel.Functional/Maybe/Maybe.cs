@@ -123,6 +123,30 @@ public readonly struct Maybe<T> : IEquatable<Maybe<T>>
             return false;
         return EqualityComparer<T>.Default.Equals(_value!, other._value!);
     }
+    
+    /// <summary>
+    /// Determines whether two <see cref="Maybe{T}"/> instances are equal.
+    /// </summary>
+    /// <param name="left">The first instance to compare.</param>
+    /// <param name="right">The second instance to compare.</param>
+    /// <returns><c>true</c> if the instances are equal; otherwise, <c>false</c>.</returns>
+    public static bool operator ==(Maybe<T>? left, Maybe<T>? right)
+    {
+        if (left is null && right is null) return true;
+        if (left is null || right is null) return false;
+        return left.Equals(right);
+    }
+    
+    /// <summary>
+    /// Determines whether two <see cref="Maybe{T}"/> instances are not equal.
+    /// </summary>
+    /// <param name="left">The first instance to compare.</param>
+    /// <param name="right">The second instance to compare.</param>
+    /// <returns><c>true</c> if the instances are not equal; otherwise, <c>false</c>.</returns>
+    public static bool operator !=(Maybe<T>? left, Maybe<T>? right)
+    {
+        return !(left == right);
+    }
 
     /// <inheritdoc />
     public override int GetHashCode()
