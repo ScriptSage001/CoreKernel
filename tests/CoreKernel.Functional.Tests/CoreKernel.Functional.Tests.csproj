@@ -20,7 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\CoreKernel.Functional\CoreKernel.Functional.csproj" />
+      <ProjectReference Include="..\..\CoreKernel.Functional\CoreKernel.Functional.csproj" />
     </ItemGroup>
 
 </Project>

@@ -14,7 +14,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{1715E71F-B486-4575-8304-D810EC2A439A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreKernel.Functional.Tests", "CoreKernel.Functional.Tests\CoreKernel.Functional.Tests.csproj", "{FB49F656-1DD9-403C-BA8A-189330F04061}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreKernel.Functional.Tests", "tests\CoreKernel.Functional.Tests\CoreKernel.Functional.Tests.csproj", "{FB49F656-1DD9-403C-BA8A-189330F04061}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
