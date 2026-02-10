@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+        <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
         <Version>1.0.0</Version>
         <Authors>Kaustab Samanta</Authors>
         <Description>CoreKernel is a modular .NET library that provides reusable primitives, functional utilities, domain markers, and messaging interfaces for building clean, maintainable, and domain-driven applications.</Description>
